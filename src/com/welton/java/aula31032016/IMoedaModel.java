@@ -5,4 +5,5 @@ public interface IMoedaModel {
 	public void setId(int id);
 	public String getMoeda();
 	public void setMoeda(String moeda);
+
 }

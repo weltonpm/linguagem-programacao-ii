@@ -1,8 +1,8 @@
 package com.welton.java.aula31032016;
 
 public interface IMoedaModel {
-	public void getId();
-	public int setId();
-	public void getMoeda();
-	public String setMoeda();
+	public int getId();
+	public void setId(int id);
+	public String getMoeda();
+	public void setMoeda(String moeda);
 }

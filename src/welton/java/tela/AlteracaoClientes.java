@@ -29,7 +29,7 @@ public class AlteracaoClientes {
 			ISituacaoClienteModel objSituacaoCliente = new SituacaoClienteModel();
 			System.out.println("Entre com o id:");
 			objSituacaoCliente.setId(sc.nextInt());
-			System.out.println("Entre com o tipo de situação: ");
+			System.out.println("Entre com o tipo de situacao: ");
 			String aux = sc.next();
 			if(aux.equalsIgnoreCase("Ativo")){
 				objSituacaoCliente.setAtivo(true);
@@ -76,7 +76,7 @@ public class AlteracaoClientes {
 			IGerarRelSpedModel objGerarRel = new GerarRelSpedModel();
 			System.out.println("Entre com o id:");
 			objGerarRel.setId(sc.nextInt());
-			System.out.println("Entre com Sim ou Nao: ");
+			System.out.println("Entre com opcao Sim ou Nao: ");
 			String aux = sc.next();
 			if(aux.equalsIgnoreCase("Sim")){
 				objGerarRel.setSim(true);
@@ -102,7 +102,7 @@ public class AlteracaoClientes {
 		}while(!opc.equalsIgnoreCase("S"));
 		
 		ICadastroBasicoModel cadastro = new CadastroBasico();
-		System.out.println("Entre com o código:");
+		System.out.println("Entre com o codigo:");
 		cadastro.setCodigo(sc.nextInt());
 		sc.nextLine();
 		System.out.println("Entre com o nome do cliente:");
@@ -110,9 +110,9 @@ public class AlteracaoClientes {
 		System.out.println("Entre com a matricula:");
 		cadastro.setMatricula(sc.nextInt());
 		sc.nextLine();
-		System.out.println("Entre com o endereço:");
+		System.out.println("Entre com o endereco:");
 		cadastro.setEndereco(sc.nextLine());
-		System.out.println("Entre com o número:");
+		System.out.println("Entre com o numero:");
 		cadastro.setNumero(sc.nextInt());
 		sc.nextLine();
 		System.out.println("Entre com o bairro:");
@@ -141,44 +141,44 @@ public class AlteracaoClientes {
 		cadastro.setCelular(sc.nextInt());
 		System.out.println("Entre com o e-mail:");
 		cadastro.setEmail(sc.next());
-		System.out.println("Entre com o código VIP - SEFAZ:");
+		System.out.println("Entre com o codigo VIP - SEFAZ:");
 		cadastro.setCodigoVipSefaz(sc.nextInt());
 		System.out.println("Entre com o CPF:");
 		cadastro.setCpf(sc.next());
 		System.out.println("Entre com a carteira de identidade:");
 		cadastro.setRg(sc.next());
 		sc.nextLine();
-		System.out.println("Entre com a data de emissão e orgão emissor:");
+		System.out.println("Entre com a data de emissão e orgao emissor:");
 		cadastro.setDataEmissaoOrgaoEmissor(sc.nextLine());
 		System.out.println("Entre com o CNPJ:");
 		cadastro.setCnpj(sc.next());
 		System.out.println("Entre com a insc. estadual:");
 		cadastro.setInscEstadual(sc.next());
-		System.out.println("Entre com o limite de crédito:");
+		System.out.println("Entre com o limite de credito:");
 		cadastro.setLimiteCredito(sc.nextDouble());
-		System.out.println("Entre com o saldo disponível:");
+		System.out.println("Entre com o saldo disponivel:");
 		cadastro.setSaldoDisponivel(sc.nextDouble());
 		System.out.println("Entre com a quantidade dup abertas no CR: ");
 		cadastro.setQtdDupAbertas(sc.nextInt());
 		sc.nextLine();
-		System.out.println("Entre com as observações: ");
+		System.out.println("Entre com as observacoes: ");
 		cadastro.setObservacoes(sc.nextLine());
 		System.out.println("Entre com a data/hora cadastro:");
 		cadastro.setDataHoraCadastro(sc.nextLine());
-		System.out.println("Entre com o usuário cadastro:");
+		System.out.println("Entre com o usuario cadastro:");
 		cadastro.setUsuarioCadastrado(sc.nextInt());
 		sc.nextLine();
-		System.out.println("Entre com o data/hora alteração:");
+		System.out.println("Entre com o data/hora alteracao:");
 		cadastro.setDataHoraAlteracao(sc.nextLine());
-		System.out.println("Entre com o usuário alteração:");
+		System.out.println("Entre com o usuario alteracao:");
 		cadastro.setUsuarioAlteracao(sc.nextInt());
 		for(int i=0; i<listTipoCliente.size();i++){
 			String s = "ID: "+listTipoCliente.get(i).getId();
 			if(listTipoCliente.get(i).isFisica()){
-				s += " - Tipo Pessoa: Física";
+				s += " - Tipo Pessoa: Fisica";
 			}
 			else{
-				s += " - Tipo Pessoa: Jurídica";
+				s += " - Tipo Pessoa: Juridica";
 			}
 			System.out.println(s);
 		}
@@ -199,7 +199,7 @@ public class AlteracaoClientes {
 			}
 			System.out.println(s);
 		}
-		System.out.println("Selecione o id da situação desejada: ");
+		System.out.println("Selecione o id da situacao desejada: ");
 		auxId = sc.nextInt();
 		for(int i=0; i<listSituacaoCliente.size();i++){
 			if(auxId == listSituacaoCliente.get(i).getId()){
@@ -226,7 +226,7 @@ public class AlteracaoClientes {
 			}
 			System.out.println(s);
 		}
-		System.out.println("Selecione o id do tipo de crédito desejado: ");
+		System.out.println("Selecione o id do tipo de credito desejado: ");
 		auxId = sc.nextInt();
 		for(int i=0; i<listTipoCredito.size();i++){
 			if(auxId == listTipoCredito.get(i).getId()){
@@ -243,7 +243,7 @@ public class AlteracaoClientes {
 			}
 			System.out.println(s);
 		}
-		System.out.println("Selecione o id da opção desejada: ");
+		System.out.println("Selecione o id da opcao desejada: ");
 		auxId = sc.nextInt();
 		for(int i=0; i<listGerarRel.size();i++){
 			if(auxId == listGerarRel.get(i).getId()){
@@ -251,22 +251,22 @@ public class AlteracaoClientes {
 			}
 		}
 		
-		System.out.println("Código: "+cadastro.getCodigo()+" - Nome do Cliente: "+cadastro.getNomeCliente()+" - Matrícula: "+cadastro.getMatricula()
-		+"\nEndereço: "+cadastro.getEndereco()+" - Nº: "+cadastro.getNumero()+" - Bairro: "+cadastro.getBairro()+ " - Tipo Cliente: "+imprimeTipoCliente(cadastro.getTipoCliente())
+		System.out.println("Codigo: "+cadastro.getCodigo()+" - Nome do Cliente: "+cadastro.getNomeCliente()+" - Matricula: "+cadastro.getMatricula()
+		+"\nEndereco: "+cadastro.getEndereco()+" - Numero: "+cadastro.getNumero()+" - Bairro: "+cadastro.getBairro()+ " - Tipo Cliente: "+imprimeTipoCliente(cadastro.getTipoCliente())
 		+"\nCidade: "+cadastro.getCidade()+" - UF: "+cadastro.getUf().getEstado()+" - ICMS: "+cadastro.getIcms()+" - CEP: "+cadastro.getCep()
-		+" - Situação do Cliente: "+imprimeSituacao(cadastro.getSituacaoCliente())+"\nTelefone: "+cadastro.getTelefone()+" - Fax: "+cadastro.getFax()
-		+" - Celular: "+cadastro.getCelular()+"\ne-mail: "+cadastro.getEmail()+" - Código VIP - SEFAZ: "+cadastro.getCodigoVipSefaz()+"\nCIC/CPF: "
-		+cadastro.getCpf()+" - Cart. Identidade: "+cadastro.getRg()+" - Data Emissão e Orgão Emissor: "+cadastro.getDataEmissaoOrgaoEmissor()
-		+" - Tipo Crédito: "+imprimeCredito(cadastro.getTipoCredito())+"\nCNPJ: "+cadastro.getCnpj()+" - Insc. Estadual: "+cadastro.getInscEstadual()
-		+" - Limite de Crédito R$: "+cadastro.getLimiteCredito()+" - Saldo Disponível R$: "+cadastro.getSaldoDisponivel()+" - Qtde Dup Abertas no CR: "
-		+cadastro.getQtdDupAbertas()+"\nObservações: "+cadastro.getObservacoes()+" - Data/Hora Cadastro: "+cadastro.getDataHoraCadastro()+
-		" - Usuário Cadastro: "+cadastro.getUsuarioCadastrado()+"\nData/Hora Alteração: "+cadastro.getDataHoraAlteracao()+ " - Usuário Alteração: "
+		+" - Situacao do Cliente: "+imprimeSituacao(cadastro.getSituacaoCliente())+"\nTelefone: "+cadastro.getTelefone()+" - Fax: "+cadastro.getFax()
+		+" - Celular: "+cadastro.getCelular()+"\ne-mail: "+cadastro.getEmail()+" - Codigo VIP - SEFAZ: "+cadastro.getCodigoVipSefaz()+"\nCIC/CPF: "
+		+cadastro.getCpf()+" - Cart. Identidade: "+cadastro.getRg()+" - Data Emissao e Orgao Emissor: "+cadastro.getDataEmissaoOrgaoEmissor()
+		+" - Tipo Credito: "+imprimeCredito(cadastro.getTipoCredito())+"\nCNPJ: "+cadastro.getCnpj()+" - Insc. Estadual: "+cadastro.getInscEstadual()
+		+" - Limite de Credito R$: "+cadastro.getLimiteCredito()+" - Saldo Disponivel R$: "+cadastro.getSaldoDisponivel()+" - Qtde Dup Abertas no CR: "
+		+cadastro.getQtdDupAbertas()+"\nObservacoes: "+cadastro.getObservacoes()+" - Data/Hora Cadastro: "+cadastro.getDataHoraCadastro()+
+		" - Usuario Cadastro: "+cadastro.getUsuarioCadastrado()+"\nData/Hora Alteracao: "+cadastro.getDataHoraAlteracao()+ " - Usuario Alteração: "
 		+cadastro.getUsuarioAlteracao()+"\nGerar Rel SPED: "+imprimeRel(cadastro.getGerarRelSped()));
 	}
 	
 	public static String imprimeTipoCliente(ITipoClienteModel tipoCliente){
 		if(tipoCliente.isFisica()){
-			return "Física";
+			return "Fisica";
 		}
 		else {
 			return "Juridica";
@@ -306,7 +306,7 @@ public class AlteracaoClientes {
 			return "Sim";
 		}
 		else{
-			return "Não";
+			return "Nao";
 		}
 	}
 }

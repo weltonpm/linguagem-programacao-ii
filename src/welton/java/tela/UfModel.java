@@ -4,7 +4,7 @@ public interface IUfModel {
 	String getEstado();
 	void setEstado(String estado);
 }
-//ComboBox UF
+//ComboBox UFs
 public class UfModel implements IUfModel{
 	private int id;
 	private String estado;

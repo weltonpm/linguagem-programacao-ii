@@ -13,9 +13,9 @@ public class CadastroBasico implements ICadastroBasicoModel{
 	private double icms;
 	private String cep;
 	private ISituacaoClienteModel situacaoCliente;
-	private int telefone;
-	private int fax;
-	private int celular;
+	private String telefone;
+	private String fax;
+	private String celular;
 	private String email;
 	private int codigoVipSefaz;
 	private String cpf;
@@ -105,22 +105,22 @@ public class CadastroBasico implements ICadastroBasicoModel{
 	public void setSituacaoCliente(ISituacaoClienteModel situacaoCliente) {
 		this.situacaoCliente = situacaoCliente;
 	}
-	public int getTelefone() {
+	public String getTelefone() {
 		return telefone;
 	}
-	public void setTelefone(int telefone) {
+	public void setTelefone(String telefone) {
 		this.telefone = telefone;
 	}
-	public int getFax() {
+	public String getFax() {
 		return fax;
 	}
-	public void setFax(int fax) {
+	public void setFax(String fax) {
 		this.fax = fax;
 	}
-	public int getCelular() {
+	public String getCelular() {
 		return celular;
 	}
-	public void setCelular(int celular) {
+	public void setCelular(String celular) {
 		this.celular = celular;
 	}
 	public String getEmail() {

@@ -25,12 +25,12 @@ public interface ICadastroBasicoModel {
 	void setCep(String cep);
 	ISituacaoClienteModel getSituacaoCliente();
 	void setSituacaoCliente(ISituacaoClienteModel situacaoCliente);
-	int getTelefone();
-	void setTelefone(int telefone);
-	int getFax();
-	void setFax(int fax);
-	int getCelular();
-	void setCelular(int celular);
+	String getTelefone();
+	void setTelefone(String telefone);
+	String getFax();
+	void setFax(String fax);
+	String getCelular();
+	void setCelular(String celular);
 	String getEmail();
 	void setEmail(String email);
 	int getCodigoVipSefaz();

@@ -7,6 +7,7 @@ public class AlteracaoClientes {
 		
 		List<ITipoClienteModel> listTipoCliente = new ArrayList<ITipoClienteModel>();
 		String opc;
+		System.out.println("Leitura do tipos de clientes para o campo tipo cliente");
 		do{ //Leitura dos tipos de clientes
 			ITipoClienteModel objTipoCliente = new TipoClienteModel();
 			System.out.println("Entre com o id:");
@@ -25,6 +26,7 @@ public class AlteracaoClientes {
 		}while(!opc.equalsIgnoreCase("S"));
 		
 		List<ISituacaoClienteModel> listSituacaoCliente = new ArrayList<ISituacaoClienteModel>();
+		System.out.println("Leitura de situacoes para o campo situacao cliente");
 		do{ //Leitura situacao do cliente
 			ISituacaoClienteModel objSituacaoCliente = new SituacaoClienteModel();
 			System.out.println("Entre com o id:");
@@ -43,6 +45,7 @@ public class AlteracaoClientes {
 		}while(!opc.equalsIgnoreCase("S"));
 		
 		List<ITipoCreditoModel> listTipoCredito = new ArrayList<ITipoCreditoModel>();
+		System.out.println("Leitura de creditos para o campo tipo de credito");
 		do{ //Leitura dos tipos de creditos
 			ITipoCreditoModel objTipoCredito = new TipoCreditoModel();
 			System.out.println("Entre com o id:");
@@ -72,6 +75,7 @@ public class AlteracaoClientes {
 		}while(!opc.equalsIgnoreCase("S"));
 		
 		List<IGerarRelSpedModel> listGerarRel = new ArrayList<IGerarRelSpedModel>();
+		System.out.println("Leitura de informacao para o campo GerarRelSped");
 		do{ //Leitura Gerar Rel Sped
 			IGerarRelSpedModel objGerarRel = new GerarRelSpedModel();
 			System.out.println("Entre com o id:");
@@ -90,6 +94,7 @@ public class AlteracaoClientes {
 		}while(!opc.equalsIgnoreCase("S"));
 		
 		List<IUfModel> listUf = new ArrayList<IUfModel>();
+		System.out.println("Leitura de UFS para o campo UF");
 		do{ //Leitura comboBox UF
 			IUfModel objUf = new UfModel();
 			System.out.println("Entre com o id:");
@@ -101,6 +106,8 @@ public class AlteracaoClientes {
 			opc = sc.next();
 		}while(!opc.equalsIgnoreCase("S"));
 		
+		//Leitura dos dados
+		System.out.println("Leitura e seleção dos dados");
 		ICadastroBasicoModel cadastro = new CadastroBasico();
 		System.out.println("Entre com o codigo:");
 		cadastro.setCodigo(sc.nextInt());
@@ -119,7 +126,7 @@ public class AlteracaoClientes {
 		cadastro.setBairro(sc.nextLine());
 		System.out.println("Entre com a cidade:");
 		cadastro.setCidade(sc.nextLine());
-		for(IUfModel list: listUf){
+		for(IUfModel list: listUf){ //Leitura UF
 			System.out.println("ID: "+list.getId()+" - UF: "+list.getEstado());
 		}
 		System.out.println("Digite o id da uf desejada: ");
@@ -134,11 +141,11 @@ public class AlteracaoClientes {
 		System.out.println("Entre com o CEP:");
 		cadastro.setCep(sc.next());
 		System.out.println("Entre com o telefone:");
-		cadastro.setTelefone(sc.nextInt());
+		cadastro.setTelefone(sc.next());
 		System.out.println("Entre com o fax:");
-		cadastro.setFax(sc.nextInt());
+		cadastro.setFax(sc.next());
 		System.out.println("Entre com o celular:");
-		cadastro.setCelular(sc.nextInt());
+		cadastro.setCelular(sc.next());
 		System.out.println("Entre com o e-mail:");
 		cadastro.setEmail(sc.next());
 		System.out.println("Entre com o codigo VIP - SEFAZ:");
@@ -172,7 +179,7 @@ public class AlteracaoClientes {
 		cadastro.setDataHoraAlteracao(sc.nextLine());
 		System.out.println("Entre com o usuario alteracao:");
 		cadastro.setUsuarioAlteracao(sc.nextInt());
-		for(int i=0; i<listTipoCliente.size();i++){
+		for(int i=0; i<listTipoCliente.size();i++){ 
 			String s = "ID: "+listTipoCliente.get(i).getId();
 			if(listTipoCliente.get(i).isFisica()){
 				s += " - Tipo Pessoa: Fisica";
@@ -184,7 +191,7 @@ public class AlteracaoClientes {
 		}
 		System.out.println("Selecione o id do tipo de pessoa desejado: ");
 		auxId = sc.nextInt();
-		for(int i=0; i<listTipoCliente.size();i++){
+		for(int i=0; i<listTipoCliente.size();i++){ //Selecao tipo de cliente
 			if(auxId == listTipoCliente.get(i).getId()){
 				cadastro.setTipoCliente(listTipoCliente.get(i));
 			}
@@ -201,7 +208,7 @@ public class AlteracaoClientes {
 		}
 		System.out.println("Selecione o id da situacao desejada: ");
 		auxId = sc.nextInt();
-		for(int i=0; i<listSituacaoCliente.size();i++){
+		for(int i=0; i<listSituacaoCliente.size();i++){ //Selecao situacao do cliente
 			if(auxId == listSituacaoCliente.get(i).getId()){
 				cadastro.setSituacaoCliente(listSituacaoCliente.get(i));
 			}
@@ -228,7 +235,7 @@ public class AlteracaoClientes {
 		}
 		System.out.println("Selecione o id do tipo de credito desejado: ");
 		auxId = sc.nextInt();
-		for(int i=0; i<listTipoCredito.size();i++){
+		for(int i=0; i<listTipoCredito.size();i++){ //Selecao tipo de credito
 			if(auxId == listTipoCredito.get(i).getId()){
 				cadastro.setTipoCredito(listTipoCredito.get(i));
 			}
@@ -245,12 +252,12 @@ public class AlteracaoClientes {
 		}
 		System.out.println("Selecione o id da opcao desejada: ");
 		auxId = sc.nextInt();
-		for(int i=0; i<listGerarRel.size();i++){
+		for(int i=0; i<listGerarRel.size();i++){ //Selecao Gerar Rel
 			if(auxId == listGerarRel.get(i).getId()){
 				cadastro.setGerarRelSped(listGerarRel.get(i));
 			}
 		}
-		
+		//Saida 
 		System.out.println("Codigo: "+cadastro.getCodigo()+" - Nome do Cliente: "+cadastro.getNomeCliente()+" - Matricula: "+cadastro.getMatricula()
 		+"\nEndereco: "+cadastro.getEndereco()+" - Numero: "+cadastro.getNumero()+" - Bairro: "+cadastro.getBairro()+ " - Tipo Cliente: "+imprimeTipoCliente(cadastro.getTipoCliente())
 		+"\nCidade: "+cadastro.getCidade()+" - UF: "+cadastro.getUf().getEstado()+" - ICMS: "+cadastro.getIcms()+" - CEP: "+cadastro.getCep()

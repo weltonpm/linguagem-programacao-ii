@@ -7,7 +7,7 @@ public class AlteracaoClientes {
 		
 		List<ITipoClienteModel> listTipoCliente = new ArrayList<ITipoClienteModel>();
 		String opc;
-		do{ //Leitura dos tipos de lientes
+		do{ //Leitura dos tipos de clientes
 			ITipoClienteModel objTipoCliente = new TipoClienteModel();
 			System.out.println("Entre com o id:");
 			objTipoCliente.setId(sc.nextInt());
@@ -25,7 +25,7 @@ public class AlteracaoClientes {
 		}while(!opc.equalsIgnoreCase("S"));
 		
 		List<ISituacaoClienteModel> listSituacaoCliente = new ArrayList<ISituacaoClienteModel>();
-		do{ //Leitura situação do cliente
+		do{ //Leitura situacao do cliente
 			ISituacaoClienteModel objSituacaoCliente = new SituacaoClienteModel();
 			System.out.println("Entre com o id:");
 			objSituacaoCliente.setId(sc.nextInt());
@@ -43,7 +43,7 @@ public class AlteracaoClientes {
 		}while(!opc.equalsIgnoreCase("S"));
 		
 		List<ITipoCreditoModel> listTipoCredito = new ArrayList<ITipoCreditoModel>();
-		do{ //Leitura dos tipos de créditos
+		do{ //Leitura dos tipos de creditos
 			ITipoCreditoModel objTipoCredito = new TipoCreditoModel();
 			System.out.println("Entre com o id:");
 			objTipoCredito.setId(sc.nextInt());
@@ -148,7 +148,7 @@ public class AlteracaoClientes {
 		System.out.println("Entre com a carteira de identidade:");
 		cadastro.setRg(sc.next());
 		sc.nextLine();
-		System.out.println("Entre com a data de emissão e orgao emissor:");
+		System.out.println("Entre com a data de emissao e orgao emissor:");
 		cadastro.setDataEmissaoOrgaoEmissor(sc.nextLine());
 		System.out.println("Entre com o CNPJ:");
 		cadastro.setCnpj(sc.next());
@@ -192,10 +192,10 @@ public class AlteracaoClientes {
 		for(int i=0; i<listSituacaoCliente.size();i++){
 			String s = "ID: "+listSituacaoCliente.get(i).getId();
 			if(listSituacaoCliente.get(i).isAtivo()){
-				s += " - Situação Cliente: Ativo";
+				s += " - Situacao Cliente: Ativo";
 			}
 			else{
-				s += " - Situação Cliente: Inativo";
+				s += " - Situacao Cliente: Inativo";
 			}
 			System.out.println(s);
 		}
@@ -209,18 +209,18 @@ public class AlteracaoClientes {
 		for(int i=0; i<listTipoCredito.size();i++){
 			String s = "ID: "+listTipoCredito.get(i).getId();
 			if(listTipoCredito.get(i).isLivre()){
-				s += " - Tipo Crédito: Livre";
+				s += " - Tipo Credito: Livre";
 			}
 			else{
 				if(listTipoCredito.get(i).isControleSaldo()){
-					s += " - Tipo Crédito: Controle de Saldo";
+					s += " - Tipo Credito: Controle de Saldo";
 				}
 				else{
 					if(listTipoCredito.get(i).isCheque()){
-						s += " - Tipo Crédito: Cheque";
+						s += " - Tipo Credito: Cheque";
 					}
 					else{
-						s += " - Tipo Crédito: Somente a Vista";
+						s += " - Tipo Credito: Somente a Vista";
 					}
 				}
 			}
@@ -239,7 +239,7 @@ public class AlteracaoClientes {
 				s += " - Gerar Rel SPED: Sim";
 			}
 			else{
-				s += " - Gerar Rel SPED: Não";
+				s += " - Gerar Rel SPED: Nao";
 			}
 			System.out.println(s);
 		}
@@ -260,7 +260,7 @@ public class AlteracaoClientes {
 		+" - Tipo Credito: "+imprimeCredito(cadastro.getTipoCredito())+"\nCNPJ: "+cadastro.getCnpj()+" - Insc. Estadual: "+cadastro.getInscEstadual()
 		+" - Limite de Credito R$: "+cadastro.getLimiteCredito()+" - Saldo Disponivel R$: "+cadastro.getSaldoDisponivel()+" - Qtde Dup Abertas no CR: "
 		+cadastro.getQtdDupAbertas()+"\nObservacoes: "+cadastro.getObservacoes()+" - Data/Hora Cadastro: "+cadastro.getDataHoraCadastro()+
-		" - Usuario Cadastro: "+cadastro.getUsuarioCadastrado()+"\nData/Hora Alteracao: "+cadastro.getDataHoraAlteracao()+ " - Usuario Alteração: "
+		" - Usuario Cadastro: "+cadastro.getUsuarioCadastrado()+"\nData/Hora Alteracao: "+cadastro.getDataHoraAlteracao()+ " - Usuario Alteracao: "
 		+cadastro.getUsuarioAlteracao()+"\nGerar Rel SPED: "+imprimeRel(cadastro.getGerarRelSped()));
 	}
 	

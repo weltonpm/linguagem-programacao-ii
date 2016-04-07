@@ -258,16 +258,24 @@ public class AlteracaoClientes {
 			}
 		}
 		//Saida 
-		System.out.println("Codigo: "+cadastro.getCodigo()+" - Nome do Cliente: "+cadastro.getNomeCliente()+" - Matricula: "+cadastro.getMatricula()
-		+"\nEndereco: "+cadastro.getEndereco()+" - Numero: "+cadastro.getNumero()+" - Bairro: "+cadastro.getBairro()+ " - Tipo Cliente: "
-		+imprimeTipoCliente(cadastro.getTipoCliente())+"\nCidade: "+cadastro.getCidade()+" - UF: "+cadastro.getUf().getEstado()+" - ICMS: "
-		+cadastro.getIcms()+" - CEP: "+cadastro.getCep()+" - Situacao do Cliente: "+imprimeSituacao(cadastro.getSituacaoCliente())+"\nTelefone: "
-		+cadastro.getTelefone()+" - Fax: "+cadastro.getFax()+" - Celular: "+cadastro.getCelular()+"\ne-mail: "+cadastro.getEmail()+" - Codigo VIP - SEFAZ: "
-		+cadastro.getCodigoVipSefaz()+"\nCIC/CPF: "+cadastro.getCpf()+" - Cart. Identidade: "+cadastro.getRg()+" - Data Emissao e Orgao Emissor: "
-		+cadastro.getDataEmissaoOrgaoEmissor()+" - Tipo Credito: "+imprimeCredito(cadastro.getTipoCredito())+"\nCNPJ: "+cadastro.getCnpj()+" - Insc. Estadual: "
-		+cadastro.getInscEstadual()+" - Limite de Credito R$: "+cadastro.getLimiteCredito()+" - Saldo Disponivel R$: "+cadastro.getSaldoDisponivel()
-		+" - Qtde Dup Abertas no CR: "+cadastro.getQtdDupAbertas()+"\nObservacoes: "+cadastro.getObservacoes()+" - Data/Hora Cadastro: "+cadastro.getDataHoraCadastro()
-		+" - Usuario Cadastro: "+cadastro.getUsuarioCadastrado()+"\nData/Hora Alteracao: "+cadastro.getDataHoraAlteracao()+ " - Usuario Alteracao: "
+		System.out.println("Codigo: "+cadastro.getCodigo()+" - Nome do Cliente: "
+		+cadastro.getNomeCliente()+" - Matricula: "+cadastro.getMatricula()+"\nEndereco: "
+		+cadastro.getEndereco()+" - Numero: "+cadastro.getNumero()+" - Bairro: "
+		+cadastro.getBairro()+ " - Tipo Cliente: "+imprimeTipoCliente(cadastro.getTipoCliente())
+		+"\nCidade: "+cadastro.getCidade()+" - UF: "+cadastro.getUf().getEstado()+" - ICMS: "
+		+cadastro.getIcms()+" - CEP: "+cadastro.getCep()+" - Situacao do Cliente: "
+		+imprimeSituacao(cadastro.getSituacaoCliente())+"\nTelefone: "+cadastro.getTelefone()
+		+" - Fax: "+cadastro.getFax()+" - Celular: "+cadastro.getCelular()+"\ne-mail: "
+		+cadastro.getEmail()+" - Codigo VIP - SEFAZ: "+cadastro.getCodigoVipSefaz()+"\nCIC/CPF: "
+		+cadastro.getCpf()+" - Cart. Identidade: "+cadastro.getRg()
+		+" - Data Emissao e Orgao Emissor: "+cadastro.getDataEmissaoOrgaoEmissor()
+		+" - Tipo Credito: "+imprimeCredito(cadastro.getTipoCredito())+"\nCNPJ: "
+		+cadastro.getCnpj()+" - Insc. Estadual: "+cadastro.getInscEstadual()+
+		" - Limite de Credito R$: "+cadastro.getLimiteCredito()+" - Saldo Disponivel R$: "
+		+cadastro.getSaldoDisponivel()+" - Qtde Dup Abertas no CR: "+cadastro.getQtdDupAbertas()
+		+"\nObservacoes: "+cadastro.getObservacoes()+" - Data/Hora Cadastro: "
+		+cadastro.getDataHoraCadastro()+" - Usuario Cadastro: "+cadastro.getUsuarioCadastrado()
+		+"\nData/Hora Alteracao: "+cadastro.getDataHoraAlteracao()+ " - Usuario Alteracao: "
 		+cadastro.getUsuarioAlteracao()+"\nGerar Rel SPED: "+imprimeRel(cadastro.getGerarRelSped()));
 	}
 	
